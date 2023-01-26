@@ -1,17 +1,18 @@
 let carrito = [];
 
 class Viaje {
-    constructor( destino, precio, adultos) {
-    
+    constructor( id, destino, precio, adultos) {
+
+        this.id = id;
         this.destino = destino;
         this.precio = precio;
         this.adultos = adultos;
     }
 }
 
-let viajeMendoza = new Viaje('Mendoza', 1200, 1);
-let viajeBariloche = new Viaje('Bairloche', 1500, 1);
-let ViajeCataratas = new Viaje('Cataratas', 800, 1);
+let viajeMendoza = new Viaje(1, 'Mendoza' , 1200 , 1);
+let viajeBariloche = new Viaje(2, 'Bairloche' , 1500 , 1);
+let ViajeCataratas = new Viaje(3, 'Cataratas' , 800 , 1);
 
 let viajes = [viajeMendoza, viajeBariloche, ViajeCataratas];
 
@@ -25,7 +26,7 @@ function agregar_a_reservas(e) {
     let card = card_body.parentNode;
 
     let destino = card_body.querySelector("h3").textContent;
-    let precio = card_body.querySelector("span").textContent;
+    let precio = Number (card_body.querySelector("span").textContent.replace ('$',''));
 
     let viaje = {
 
@@ -38,6 +39,8 @@ function agregar_a_reservas(e) {
 
     calcularTotalCompra();
 
+    calcularTotalPersonas();
+
     mostrarViaje(viaje);
 };
 
@@ -49,9 +52,18 @@ let totalCompra = document.getElementById('totalCompra');
 let calcularTotalCompra = () => {
     
     let total = carrito.reduce((acc, el) => acc + el.precio, 0);
-    totalCompra.innerHTML = `<p> ${total} </p>`;
-    console.log (total);
+    totalCompra.innerHTML = `<p> ${total}$ </p>`;
 
+};
+
+//SUMATORIA PERSONAS
+
+let totalPersonas = document.getElementById ('personasTotal');
+
+let calcularTotalPersonas = () => {
+
+    let sumaPersonas = carrito.reduce((acc, el) => acc + el.adultos, 0);
+    personasTotal.innerHTML = `<p> ${sumaPersonas} </p>`;
 };
 
 
@@ -75,7 +87,7 @@ function mostrarViaje(viaje) {
 
         boton.addEventListener("click", eliminar_reserva);
     }
-}
+};
 
 //ELIMINA LA RESERVAS DEL VIAJE
 
@@ -83,7 +95,11 @@ function eliminar_reserva(e) {
 
     let reserva = e.target.parentNode.parentNode;
     reserva.remove();
-}
+
+    
+};
+
+
 
 
 //BOTON VER Y ESCONDER RESERVAS
@@ -118,5 +134,7 @@ let destinos_JSON = JSON.stringify(destinos);
 
 localStorage.setItem("destinos", destinos_JSON);
 
+
+// ACTUALIZADO
 
 
