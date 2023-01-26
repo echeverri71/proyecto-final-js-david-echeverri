@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Nómadas | Agencia de Vaijes</title>
+</head>
+<body>
+    <div class="grid-container"></div>
+        <header>
+            <nav>
+                <a class="logo_header" href="./index.html"><img class="logo_nomadas" src="./img/nomadas_agencia_logowhite.png"
+                    alt="Logo Nómadas, Agencia de viajes"></a>
+                
+            </nav>
+        </header>
+        <main>
+            <section>
+                <div>
+                    <h1 class="t1">Bienvenido a Nómadas, tu agencia de viajes!</h1>
+                    <h2 class="t2">Elige tu destino favorito de viaje</h2>
+                </div>
+            </section>
+            <section class="cards">
+                <div class="col">
+                    <div class="card">
+                        <img src="img/mendoza.png" class="card_img_mendoza" alt="Paisaje Mendoza">
+                        <div class="card-body">
+                            <h3 class="card-title">Viaja a Mendoza</h3>
+                            <p class="card-text">Tour por las mejores bodegas de mendoza, 4 noches, alojamiento y transporte incluido, una experiencia unica.</p>
+                            <span class="precio">1200$</span>
+                            <button class="btn_reservar">Reservar Ya!</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/Bariloche_img.png" class="card_img_bariloche" alt="Paisaje Bariloche">
+                        <div class="card-body">
+                            <h3 class="card-title">Viaja a Bariloche</h3>
+                            <p class="card-text">Tour por los 7 lagos, Cerro Tronador, y muchos mas, 4 noches, alojamiento, excursiones y transporte incluido.</p>
+                            <span class="precio">1500$</span>
+                            <button class="btn_reservar">Reservar Ya!</button>
+                            
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/cataratas_img.png" class="card_img_cataratas" alt="Paisaje Cataratas del Iguazu">
+                        <div class="card-body">
+                            <h3 class="card-title">Viaja a Cataratas del Iguazu</h3>
+                            <p class="card-text">Tour cataratas lado Argentina y lado Brasil, 3 noches, alojamiento, excursiones y transporte incluido.</p>
+                            <span class="precio">800$</span>
+                            <button class="btn_reservar">Reservar Ya!</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ver_reservas">
+                    <button class="reservas" id="mostrar_reservas">Ver Mis Reservas</button>
+                </div>
+                <div class="container" id="mis_reservas">
+                    <h2 class="tt_reservas">Mis Reservas</h2>
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <td>Destino</td>
+                                <td># Personas</td>
+                                <td>Precio Por Persona</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            
+                        </tbody>
+                        
+                        <tbody class="tbodyTotal">
+                            <tr>
+                                <td>Total Reserva</td>
+                                <td class="personasTotal">Total # Personas</td>
+                                <td id="totalCompra">Total Precio 0$</td>
+                                <td></td>
+                            </tr>
+                            
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </section>
+            
+        </main>
+        <footer>
+            <div>
+                <div class="texto_footer">
+                    <img class="logo_footer" src="./img/nomadas_agencia_logowhite.png" alt="Logo Nómadas">
+                    <h5 class="txt-footer">Todos los derechos reservados a Nómadas, tu agencia de viajes! | 2023 Privacidad y Politicas<h5>
+                    
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./viajes.js"></script>
+
+</body>
+</html>

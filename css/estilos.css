@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: auto auto auto;
+gap: 0px 0px;
+grid-auto-flow: row;
+grid-template-areas: "header header" "main main" "footer footer"; 
+}
+
+
+body {
+    background-image: url(../img/fondo_ppal.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+main {
+    grid-area: main;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo_nomadas {
+    width: 150px;
+    height: auto;
+    padding: 10px;
+    
+
+}
+
+.t1 {
+    color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 70px;
+    text-align: center;   
+}
+.t2 {
+    color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.col{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.card{
+    width: 400px;
+    height: auto;
+    margin: 20px;
+}
+
+.card_img_mendoza{
+    width: 400px;
+    height: auto;
+}
+.card_img_bariloche{
+    width: 400px;
+    height: auto;
+}
+
+.card_img_cataratas{
+    width: 400px;
+    height: auto;
+}
+
+.card-body {
+    background-color: black;
+    padding-bottom: 20px;
+}
+
+.card-title {
+    padding: 10px;
+    color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 24px;
+}
+
+.card-text {
+    padding: 10px;
+    color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 22px;
+}
+
+.precio{
+    padding: 10px;
+    color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 20px;
+}
+.btn_reservar {
+    text-decoration: none;
+    margin-top: 15px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background: #FF6818;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.9s;
+    text-align: center;
+    width: 35%;
+    height: auto;
+    box-shadow: none;
+    transition: 1s;
+}
+
+.btn_reservar:hover {
+    transform: scale(1.1);
+}
+
+.ver_reservas{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reservas {
+    text-decoration: none;
+    margin-top: 15px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    background: #FF6818;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.9s;
+    text-align: center;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    transition: 1s;
+}
+
+.reservas:hover {
+    transform: scale(1.1);
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+.texto_footer{
+    padding-top: 15px;
+    color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.logo_footer{
+    width: 150px;
+    height: auto;
+    padding-bottom: 20px;
+    
+}
+
+.tt_reservas {
+    color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 40px;
+}
