@@ -85,7 +85,7 @@ function mostrarViaje(viaje) {
 
     for (let boton of btn_eleminar_reserva) {
 
-        boton.addEventListener("click", eliminar_reserva);
+        boton.addEventListener("click", eliminar_reserva, eliminar_precio);
     }
 };
 
@@ -96,8 +96,14 @@ function eliminar_reserva(e) {
     let reserva = e.target.parentNode.parentNode;
     reserva.remove();
 
-    
 };
+
+function eliminar_precio (){
+
+    let eliiminaPrecio = document.querySelector (".precio");
+    eliiminaPrecio.remove ();
+    calcularTotalCompra();
+}
 
 
 
@@ -135,6 +141,6 @@ let destinos_JSON = JSON.stringify(destinos);
 localStorage.setItem("destinos", destinos_JSON);
 
 
-// ACTUALIZADO
+
 
 
