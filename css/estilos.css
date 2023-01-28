@@ -37,13 +37,69 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
+.contenedor_logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clima{
+    background-color: #ff69184e;
+    height: 50px;
+}
+.contenedor_clima {
+    
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    
+
+}
+
+.tt_clima{
+    color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    
+}
+.temp{
+    color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.humedad{
+    color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.descripcion{
+    color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.temp-max{
+    color: white;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
 .logo_nomadas {
     width: 150px;
     height: auto;
-    padding: 10px;
+    padding-top: 20px;
     
-
 }
 
 .t1 {
@@ -121,7 +177,7 @@ header {
     font-weight: bold;
     font-size: 15px;
     color: white;
-    background: #FF6818;
+    background: #ff6818;
     border-radius: 50px;
     border: none;
     transition: all 0.9s;
